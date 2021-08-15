@@ -13,5 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
 
+Route::get('/', 'ArticleController@index');
+Route::get('/create', 'ArticleController@create');
+Route::post('/stores', 'ArticleController@store');
+Route::get('/update/{id}', 'ArticleController@edit');
+Route::put('/update/{id}', 'ArticleController@update');
+Route::delete('/delete/{id}', 'ArticleController@destroy');
